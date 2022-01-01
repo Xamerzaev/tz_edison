@@ -15,13 +15,13 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
-<script type="text/javascript" src="{% static "js/first.js" %}"></script>
-<script type="text/javascript" src="{% static "js/timer.js" %}"></script>
-<script type="text/javascript" src="{% static "js/main.js" %}"></script>
-<script type="text/javascript" src="{% static "js/reset.js" %}"></script>
+<script src="{% static 'js/first.js' %}"></script>
+<script src="{% static 'js/timer.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/reset.js' %}"></script>
 
 {% if phase.active %}
-    <script type="text/javascript" src="{% static "js/second.js" %}"></script>
+    <script src="{% static 'js/second.js' %}"></script>
 {% else %}
-    <script type="text/javascript" src="{% static "js/dashboard.js" %}"></script>
+    <script src="{% static 'js/dashboard.js' %}"></script>
 {% endif %}
