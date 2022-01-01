@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_ROOT   =   os.path.join(os.path.abspath(__file__))
 
 STATIC_URL = '/static/'
-STATIC_ROOT  =   os.path.join(BASE_DIR, 'static', 'static_root')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Extra lookup directories for collectstatic to find static files
 STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
@@ -140,7 +140,7 @@ USE_TZ = True
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+db_from_env  =  dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 django_heroku.settings(locals())
