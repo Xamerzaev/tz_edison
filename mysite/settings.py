@@ -24,7 +24,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT  =   os.path.join(BASE_DIR, 'static', 'static_root')
 
 # Extra lookup directories for collectstatic to find static files
-STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
+#STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Quick-start development settings - unsuitable for production
