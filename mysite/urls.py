@@ -14,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from vote.utils import get_event
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('vote.urls')),
-    path(r'^get_event/', get_event, name='get_event'),
+    re_path(r'^get_event/', get_event, name='get_event'),
 ]

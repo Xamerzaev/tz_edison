@@ -36,7 +36,7 @@ def get_win_list(phase):
     return win_time, win_event, win_user
 
 
-# Сброс голосования
+
 def reset_vote(phase):
     phase.active = False
     phase.save(update_fields=['active'])
